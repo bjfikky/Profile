@@ -1,0 +1,22 @@
+.main {
+    background-color: #06589D;
+    color: aqua;
+}
+
+.edu {
+    border-style: dashed;
+}
+
+.image {
+    display: flex;
+    align-items: flex-start;
+
+}
+.image:hover {
+
+}
+
+.education {
+    border-left: 30px;
+    border-bottom: #06589D;
+}
