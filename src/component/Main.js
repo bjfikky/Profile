@@ -28,9 +28,9 @@ const educationList = [
         degree: "Bachelor of Science in Mathematics",
         date: "Sept 2013 – Sept 2017",
         description: "During study, I learnt some basics knowledge on how to\n" +
-        "use MATLAB and for my final thesis I did On some\n" +
-        "convergence properties of certain infinite product of real\n" +
-        "and complex number"
+            "use MATLAB and for my final thesis I did On some\n" +
+            "convergence properties of certain infinite product of real\n" +
+            "and complex number"
     }
 ]
 
@@ -77,21 +77,26 @@ const experienceList = [
 function Main(props) {
 
     const education = educationList.map(
-        x=> <EducationItem education={x}/>
+        x => <EducationItem education={x}/>
 
     );
 
+    // You were supposed to create a variable that returns a list of experience item components
+    const experience = experienceList.map(
+        x => <ExperienceItem experience={x} />
+    )
+
     return (
         <div className= "main">
-           <section className='image fl w-third'>
-               <img
-                   alt="Profile"
-                   className="img-fluid rounded shadow-lg"
-                   height="auto"
-                   width="auto"
-                   src={Profile}
-               />
-           </section>
+            <section className='image fl w-third'>
+                <img
+                    alt="Profile"
+                    className="img-fluid rounded shadow-lg"
+                    height="auto"
+                    width="auto"
+                    src={Profile}
+                />
+            </section>
 
             <section className='education fl w-two-thirds'>
 
@@ -104,6 +109,12 @@ function Main(props) {
 
             </section>
 
+            <section className='fl w-two-thirds'>
+                <ul className='work'>
+                    WORK EXPERIENCE
+                    {experience}
+                </ul>
+            </section>
 
         </div>
     );
